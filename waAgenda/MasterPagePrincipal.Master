@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPagePrincipal.master.cs" Inherits="waAgenda.MasterPagePrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 536px;
+            height: 512px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header> <h1> AGENDA</h1></header>
+        <nav> 
+            <asp:Menu ID="Menu" runat="server" BackColor="#CCCCCC" Font-Bold="True" Font-Size="Larger" ForeColor="#000066" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/index.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="Usuario" Value="Usuario" NavigateUrl="~/usuarios.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Contato" Value="Contato" NavigateUrl="~/contato.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sair" Value="Sair" NavigateUrl="~/sair.aspx"></asp:MenuItem>
+                </Items>
+                <StaticSelectedStyle Font-Bold="True" />
+            </asp:Menu>
+        </nav>
+        <main>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        <img class="auto-style1" src="Imagens/agenda.jpg" /></p>
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <footer>
+            <h4>Site desenvolvido por Jackson Oliveira</h4>
+        </footer>
+    </form>
+</body>
+</html>
